@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our 2025 Journey Together ✨</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Enhanced Luxury Romance Aesthetic */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #fff5f5, #feeae6, #ffe9e6, #ffd6e0);
+      background-size: 400% 400%;
+      animation: gradientBackground 18s ease infinite;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      color: #5d4157;
+    }
+    
+    @keyframes gradientBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    /* Enhanced Background with floating elements */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle, rgba(255, 192, 203, 0.15) 1px, transparent 1px),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='%23ffe9e6' %3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+      background-size: 40px 40px, 30px 30px;
+      opacity: 0.3;
+      z-index: -2;
+      pointer-events: none;
+    }
+    
+    /* Glowing vignette */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, transparent 65%, rgba(216, 90, 127, 0.3) 100%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2rem 3rem;
+      text-align: center;
+    }
+    
+    /* Header with Romantic Glow */
+    header {
+      margin-bottom: 3rem;
+      position: relative;
+      padding: 2rem 0;
+      animation: fadeIn 2s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    h1 {
+      font-family: 'Playfair Display', 'Times New Roman', serif;
+      font-size: 4.2rem;
+      background: linear-gradient(45deg, #d85a7f, #6b4984, #e6be8a);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
+      position: relative;
+      display: inline-block;
+      letter-spacing: 1.5px;
+      padding: 0 1rem;
+    }
+    
+    h1::before, h1::after {
+      content: "✧";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2.8rem;
+      color: rgba(216, 90, 127, 0.6);
+      animation: floatOrb 4s ease-in-out infinite alternate;
+    }
+    
+    @keyframes floatOrb {
+      from { transform: translateY(-50%) scale(1) rotate(0deg); }
+      to { transform: translateY(-50%) scale(1.3) rotate(10deg); opacity: 0.9; }
+    }
+    
+    h1::before {
+      left: -2rem;
+      animation-delay: 0.3s;
+    }
+    
+    h1::after {
+      right: -2rem;
+      animation-delay: 0.7s;
+    }
+    
+    .subtitle {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.1rem;
+      color: #b5838d;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+      animation: shimmer 4s infinite;
+      background: linear-gradient(90deg, 
+        rgba(181, 131, 141, 1) 0%, 
+        rgba(216, 90, 127, 1) 50%, 
+        rgba(230, 190, 138, 1) 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      padding: 0 1rem;
+    }
+    
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    
+    /* Music Player Controls */
+    .music-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 50px;
+      max-width: 500px;
+      box-shadow: 0 8px 20px rgba(216, 90, 127, 0.15);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(216, 90, 127, 0.1);
+    }
+    
+    .music-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #d85a7f, #e6be8a);
+      color: white;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.3rem;
+      box-shadow: 0 5px 15px rgba(216, 90, 127, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .music-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(216, 90, 127, 0.4);
+    }
+    
+    .music-info {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      color: #6b4984;
+      font-weight: 600;
+    }
+    
+    /* Horizontal Timeline with Enhanced Aesthetics */
+    .timeline-container {
+      position: relative;
+      width: 100%;
+      padding: 4rem 0 6rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      margin-top: 1rem;
+    }
+    
+    .timeline-container::-webkit-scrollbar {
+      height: 10px;
+    }
+    
+    .timeline-container::-webkit-scrollbar-track {
+      background: rgba(216, 90, 127, 0.1);
+      border-radius: 10px;
+    }
+    
+    .timeline-container::-webkit-scrollbar-thumb {
+      background: linear-gradient(45deg, #d85a7f, #e6be8a);
+      border-radius: 10px;
+    }
+    
+    .timeline {
+      position: relative;
+      min-width: 3400px;
+      height: 500px;
+      margin: 0 auto;
+    }
+    
+    /* Glowing Timeline Path */
+    .timeline-path {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(to right, 
+        rgba(212, 175, 55, 0.7), 
+        rgba(230, 190, 138, 0.8), 
+        rgba(216, 90, 127, 0.9),
+        rgba(230, 190, 138, 0.8),
+        rgba(212, 175, 55, 0.7));
+      transform: translateY(-50%);
+      z-index: 1;
+      box-shadow: 0 0 30px rgba(216, 90, 127, 0.5);
+      animation: glowPath 4s infinite alternate;
+      border-radius: 3px;
+    }
+    
+    @keyframes glowPath {
+      from { box-shadow: 0 0 15px rgba(216, 90, 127, 0.5); }
+      to { box-shadow: 0 0 35px rgba(216, 90, 127, 0.8); }
+    }
+    
+    /* Timeline Endpoints with Sparkle */
+    .timeline-path::before, .timeline-path::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(216, 90, 127, 0.9), rgba(212, 175, 55, 0.9));
+      transform: translateY(-50%);
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+      z-index: 2;
+    }
+    
+    .timeline-path::before { 
+      left: -8px; 
+      animation: pulseStart 3s infinite; 
+    }
+    
+    .timeline-path::after { 
+      right: -8px; 
+      animation: pulseEnd 3s infinite; 
+    }
+    
+    @keyframes pulseStart {
+      0% { transform: translateY(-50%) scale(1); box-shadow: 0 0 15px rgba(212, 175, 55, 0.7); }
+      50% { transform: translateY(-50%) scale(1.4); box-shadow: 0 0 30px rgba(212, 175, 55, 1); }
+      100% { transform: translateY(-50%) scale(1); box-shadow: 0 0 15px rgba(212, 175, 55, 0.7); }
+    }
+    
+    @keyframes pulseEnd {
+      0% { transform: translateY(-50%) scale(1); box-shadow: 0 0 15px rgba(216, 90, 127, 0.7); }
+      50% { transform: translateY(-50%) scale(1.4); box-shadow: 0 0 30px rgba(216, 90, 127, 1); }
+      100% { transform: translateY(-50%) scale(1); box-shadow: 0 0 15px rgba(216, 90, 127, 0.7); }
+    }
+    
+    /* Milestone Items with Hidden Cover */
+    .milestone {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      cursor: pointer;
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .milestone:hover {
+      transform: translateY(-50%) scale(1.15);
+      filter: brightness(1.1);
+      z-index: 10;
+    }
+    
+    /* Staggered positioning */
+    .milestone:nth-child(odd) { margin-top: -120px; }
+    .milestone:nth-child(even) { margin-top: 120px; }
+    
+    /* Polaroid with Hidden Cover */
+    .polaroid {
+      background-color: white;
+      padding: 15px 15px 50px 15px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(216, 90, 127, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+      display: inline-block;
+      transform: rotate(-5deg);
+      transition: all 0.6s ease;
+      width: 220px;
+      position: relative;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    
+    .milestone:hover .polaroid {
+      transform: rotate(-1deg) translateY(-15px);
+      box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Image Cover that "explodes" on click */
+    .image-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(216, 90, 127, 0.9), rgba(230, 190, 138, 0.9));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: 'Dancing Script', cursive;
+      font-size: 2rem;
+      z-index: 3;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    
+    .image-cover::before {
+      content: "Tap to reveal ✨";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    
+    .image-cover::after {
+      content: "❦";
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      font-size: 1.5rem;
+      opacity: 0.7;
+    }
+    
+    /* When cover is removed */
+    .cover-removed .image-cover {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    /* Celebration effect for when cover is clicked */
+    .celebration-particle {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0;
+    }
+    
+    .polaroid img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
+      border-radius: 3px;
+      transition: transform 0.5s ease;
+    }
+    
+    .milestone:hover .polaroid img {
+      transform: scale(1.05);
+    }
+    
+    .polaroid .milestone-label {
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.4rem;
+      font-weight: bold;
+      background: linear-gradient(45deg, #d85a7f, #6b4984);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      padding: 0 5px;
+    }
+    
+    /* Floating Hearts Animation */
+    .heart {
+      position: fixed;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d85a7f' opacity='0.7' %3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+      width: 25px; 
+      height: 25px;
+      background-size: contain;
+      z-index: -1;
+      pointer-events: none;
+      animation: float 20s linear infinite;
+    }
+    
+    @keyframes float {
+      0% { 
+        transform: translateY(100vh) rotate(0deg) translateX(0); 
+        opacity: 0; 
+      }
+      10% { opacity: 0.8; }
+      90% { opacity: 0.6; }
+      100% { 
+        transform: translateY(-100px) rotate(360deg) translateX(100px); 
+        opacity: 0; 
+      }
+    }
+    
+    /* Modal for Milestone Details */
+    .modal {
+      display: none; 
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8); 
+      z-index: 2000;
+      justify-content: center; 
+      align-items: center; 
+      backdrop-filter: blur(10px);
+      animation: modalFadeIn 0.5s ease;
+    }
+    
+    @keyframes modalFadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .modal.active { display: flex; }
+    
+    .modal-content {
+      background: linear-gradient(135deg, #fff, #feeae6);
+      padding: 40px; 
+      max-width: 700px; 
+      width: 90%; 
+      border-radius: 20px;
+      text-align: center; 
+      position: relative; 
+      border: 2px solid rgba(216, 90, 127, 0.3);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+      animation: modalSlideIn 0.5s ease;
+    }
+    
+    @keyframes modalSlideIn {
+      from { transform: translateY(50px) scale(0.9); opacity: 0; }
+      to { transform: translateY(0) scale(1); opacity: 1; }
+    }
+    
+    .modal-image { 
+      width: 100%; 
+      max-height: 400px; 
+      object-fit: cover; 
+      border-radius: 12px; 
+      border: 3px solid white; 
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      margin-bottom: 2rem; 
+    }
+    
+    .modal-title { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 2.8rem; 
+      color: #d85a7f; 
+      margin-bottom: 1.2rem; 
+    }
+    
+    .modal-caption { 
+      font-family: 'Dancing Script', cursive; 
+      font-size: 2rem; 
+      color: #b5838d; 
+      line-height: 1.5;
+    }
+    
+    .close-btn { 
+      position: absolute; 
+      top: 20px; 
+      right: 20px; 
+      width: 45px; 
+      height: 45px; 
+      border-radius: 50%; 
+      border: 2px solid #d85a7f; 
+      background: white; 
+      color: #d85a7f; 
+      cursor: pointer; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .close-btn:hover {
+      background: #d85a7f;
+      color: white;
+      transform: rotate(90deg);
+    }
+    
+    /* Continue Button */
+    .continue-btn {
+      display: inline-block; 
+      margin-top: 3rem; 
+      padding: 1.4rem 4rem;
+      background: linear-gradient(45deg, #d85a7f, #e6be8a, #6b4984);
+      color: white; 
+      border: none; 
+      border-radius: 50px; 
+      font-size: 1.5rem;
+      cursor: pointer; 
+      font-family: 'Montserrat', sans-serif; 
+      font-weight: 600;
+      box-shadow: 0 12px 25px rgba(216, 90, 127, 0.4);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      letter-spacing: 1px;
+    }
+    
+    .continue-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 30px rgba(216, 90, 127, 0.6);
+      letter-spacing: 2px;
+    }
+    
+    .continue-btn::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.7s ease;
+    }
+    
+    .continue-btn:hover::after {
+      left: 100%;
+    }
+    
+    /* Decorative Elements */
+    .sparkle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: white;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: -1;
+      box-shadow: 0 0 10px 2px white;
+      animation: sparkleTwinkle 3s infinite;
+    }
+    
+    @keyframes sparkleTwinkle {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 { font-size: 3rem; }
+      .subtitle { font-size: 1.7rem; }
+      .polaroid { width: 180px; }
+      .polaroid img { height: 140px; }
+      .timeline { min-width: 2800px; height: 450px; }
+      .modal-content { padding: 25px; }
+      .modal-title { font-size: 2.2rem; }
+      .modal-caption { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Music with Controls -->
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <div class="container">
+    <header>
+      <h1>Our 2025 Journey Together 💖</h1>
+      <p class="subtitle">Every moment with you is a precious memory<br>Let's revisit our beautiful year together ✨</p>
+      
+      <!-- Music Controls -->
+      <div class="music-controls">
+        <button id="playBtn" class="music-btn">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="pauseBtn" class="music-btn">
+          <i class="fas fa-pause"></i>
+        </button>
+        <button id="volumeUp" class="music-btn">
+          <i class="fas fa-volume-up"></i>
+        </button>
+        <div class="music-info">Our Song 🎶</div>
+      </div>
+    </header>
+    
+    <!-- Horizontal Timeline -->
+    <div class="timeline-container">
+      <div class="timeline">
+        <div class="timeline-path"></div>
+        <!-- Milestones will be added here by JavaScript -->
+      </div>
+    </div>
+    
+    <!-- Continue Button -->
+    <button class="continue-btn" id="continueBtn">
+      <i class="fas fa-heart" style="margin-right: 10px;"></i> 
+      Welcome 2026, My Love 🎇 
+      <i class="fas fa-heart" style="margin-left: 10px;"></i>
+    </button>
+  </div>
+  
+  <!-- Modal for Milestone Details -->
+  <div class="modal" id="milestoneModal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <img src="" alt="" class="modal-image">
+      <h3 class="modal-title"></h3>
+      <p class="modal-caption"></p>
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Music Player Logic
+      const music = document.getElementById('bgMusic');
+      const playBtn = document.getElementById('playBtn');
+      const pauseBtn = document.getElementById('pauseBtn');
+      const volumeUp = document.getElementById('volumeUp');
+      const startTime = 0; // Start from beginning
+      const endTime = 62; // End at 1:02 (for this sample music)
+      
+      // Set initial volume
+      music.volume = 0.5;
+      
+      // Start music with a user interaction
+      const startMusic = () => {
+        music.currentTime = startTime;
+        music.play().then(() => {
+          console.log("Romantic music started");
+          playBtn.innerHTML = '<i class="fas fa-play"></i>';
+        }).catch(e => {
+          console.log("Auto-play blocked. Please click play button.");
+          playBtn.innerHTML = '<i class="fas fa-play"></i>';
+        });
+      };
+      
+      // Play button
+      playBtn.addEventListener('click', () => {
+        if (music.paused) {
+          music.play();
+          playBtn.innerHTML = '<i class="fas fa-play"></i>';
+        } else {
+          music.pause();
+          playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        }
+      });
+      
+      // Pause button
+      pauseBtn.addEventListener('click', () => {
+        music.pause();
+        playBtn.innerHTML = '<i class="fas fa-play"></i>';
+      });
+      
+      // Volume up button
+      volumeUp.addEventListener('click', () => {
+        if (music.volume < 1) {
+          music.volume = Math.min(1, music.volume + 0.2);
+        }
+      });
+      
+      // Loop trimming logic
+      music.addEventListener('timeupdate', function() {
+        if (this.currentTime >= endTime) {
+          this.currentTime = startTime;
+          this.play();
+        }
+      });
+      
+      // Milestone Data
+      const milestones = [
+        { id: 1, title: "January: New Beginnings 🌱 ✨", image: "pici (2).jpg", caption: "Started the year with fresh goals and endless possibilities! Every day with you is a blessing. 🚀 💎", position: 5 },
+        { id: 2, title: "February: Focus & Love 🏹 ❤️", image: "pici (3).jpg", caption: "Building momentum and staying consistent with our vision. Your support means everything. 🌹 💍", position: 12 },
+        { id: 3, title: "March: Spring Blossoms 🌸 🌷", image: "pici (4).jpg", caption: "Reached a significant milestone that seemed impossible. Together we can do anything. 🏆 🌈", position: 19 },
+        { id: 4, title: "April: New Perspectives 🌈 🦋", image: "pici (5).jpg", caption: "Learning to navigate challenges with a positive mindset. You make everything brighter. ☀️ 🎈", position: 26 },
+        { id: 5, title: "May: Peak Energy ⚡ 🔥", image: "pici (6).jpg", caption: "Pushing boundaries and discovering new strengths together! With you, I'm unstoppable. 💪 🎇", position: 33 },
+        { id: 6, title: "June: Mid-Year Wins 🎊 🥂", image: "pici (7).jpg", caption: "Celebrating the halfway mark with great progress! Cheers to us, my love! 🥳 🎂", position: 40 },
+        { id: 7, title: "July: Summer Vibes 🌊 🏖️", image: "pici (8).jpg", caption: "Unforgettable memories made under the summer sun! Our beach days are my favorite. 🏝️ 🍦", position: 47 },
+        { id: 8, title: "August: Growth Together 🪴 📚", image: "pici (9).jpg", caption: "Investing time in growing together and learning new things. You inspire me every day. 🎓 🧠", position: 54 },
+        { id: 9, title: "September: Harvest Time 🍂 🍎", image: "pici (10).jpg", caption: "Seeing the fruits of our labor from the earlier months. Our teamwork paid off! 🧺 🥧", position: 61 },
+        { id: 10, title: "October: Cozy Reflections 🕯️ 🧡", image: "pici (11).jpg", caption: "Strengthening our bond with cozy moments together. I love our quiet nights in. 🧣 🍵", position: 68 },
+        { id: 11, title: "November: Gratitude 🙏 🥧", image: "pici (12).jpg", caption: "Counting blessings and preparing for a strong finish. I'm so grateful for you. ✨ 🦃", position: 75 },
+        { id: 12, title: "December: Grand Finale ❄️ 🎁", image: "pici (13).jpg", caption: "Looking back with pride at our amazing year together. You're my greatest gift. 🎄 ⛄", position: 82 },
+        { id: 13, title: "Our Special Moment 💞 💍", image: "pici (14).jpg", caption: "A surprise highlight that made our year truly magical! I'll cherish this forever. 😍 🪄", position: 89 },
+        { id: 14, title: "Future Ready 🌠 🎇", image: "pici (15).jpg", caption: "Ready to step into the next chapter together with confidence! Our future is bright. 🥂 🎆", position: 96 }
+      ];
+      
+      const timeline = document.querySelector('.timeline');
+      const modal = document.getElementById('milestoneModal');
+      const modalImage = modal.querySelector('.modal-image');
+      const modalTitle = modal.querySelector('.modal-title');
+      const modalCaption = modal.querySelector('.modal-caption');
+      const closeBtn = modal.querySelector('.close-btn');
+      
+      // Create celebration particles
+      function createCelebrationParticles(x, y, color) {
+        const particleColors = ['#d85a7f', '#e6be8a', '#6b4984', '#ffffff', '#ffb6c1'];
+        for (let i = 0; i < 25; i++) {
+          const particle = document.createElement('div');
+          particle.className = 'celebration-particle';
+          particle.style.left = `${x}px`;
+          particle.style.top = `${y}px`;
+          particle.style.backgroundColor = color || particleColors[Math.floor(Math.random() * particleColors.length)];
+          particle.style.boxShadow = `0 0 10px 2px ${particle.style.backgroundColor}`;
+          
+          // Random size
+          const size = Math.random() * 15 + 5;
+          particle.style.width = `${size}px`;
+          particle.style.height = `${size}px`;
+          
+          // Random animation
+          const angle = Math.random() * Math.PI * 2;
+          const velocity = 3 + Math.random() * 5;
+          const vx = Math.cos(angle) * velocity;
+          const vy = Math.sin(angle) * velocity;
+          
+          document.body.appendChild(particle);
+          
+          // Animate particle
+          let opacity = 1;
+          let posX = x;
+          let posY = y;
+          const animateParticle = () => {
+            opacity -= 0.03;
+            posX += vx;
+            posY += vy;
+            
+            particle.style.left = `${posX}px`;
+            particle.style.top = `${posY}px`;
+            particle.style.opacity = opacity;
+            
+            if (opacity > 0) {
+              requestAnimationFrame(animateParticle);
+            } else {
+              particle.remove();
+            }
+          };
+          
+          requestAnimationFrame(animateParticle);
+        }
+      }
+      
+      // Create milestone elements
+      milestones.forEach((milestone, index) => {
+        const milestoneEl = document.createElement('div');
+        milestoneEl.className = 'milestone';
+        milestoneEl.style.left = `${milestone.position}%`;
+        milestoneEl.style.opacity = '0';
+        milestoneEl.innerHTML = `
+          <div class="polaroid">
+            <div class="image-cover"></div>
+            <img src="${milestone.image}" alt="${milestone.title}" loading="lazy">
+            <div class="milestone-label">${milestone.title}</div>
+          </div>
+        `;
+        
+        milestoneEl.setAttribute('data-id', milestone.id);
+        timeline.appendChild(milestoneEl);
+        
+        // Staggered appearance
+        setTimeout(() => {
+          milestoneEl.style.opacity = '1';
+          milestoneEl.style.transition = 'opacity 1s ease';
+        }, 300 * index);
+        
+        // Add click event for cover removal and celebration
+        const cover = milestoneEl.querySelector('.image-cover');
+        const polaroid = milestoneEl.querySelector('.polaroid');
+        
+        cover.addEventListener('click', function(e) {
+          e.stopPropagation();
+          
+          // Add class to trigger cover removal animation
+          polaroid.classList.add('cover-removed');
+          
+          // Create celebration particles at click location
+          const rect = cover.getBoundingClientRect();
+          const x = rect.left + rect.width / 2;
+          const y = rect.top + rect.height / 2;
+          
+          createCelebrationParticles(x, y, '#d85a7f');
+          
+          // Play a subtle sound for celebration
+          try {
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            oscillator.frequency.setValueAtTime(523.25, audioContext.currentTime); // C5
+            oscillator.frequency.setValueAtTime(659.25, audioContext.currentTime + 0.1); // E5
+            oscillator.frequency.setValueAtTime(783.99, audioContext.currentTime + 0.2); // G5
+            
+            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+            
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + 0.5);
+          } catch (e) {
+            console.log("Audio context not supported");
+          }
+          
+          // After cover is removed, allow clicking the image to open modal
+          setTimeout(() => {
+            milestoneEl.addEventListener('click', openModal);
+          }, 500);
+        });
+        
+        // Function to open modal
+        function openModal() {
+          const id = milestoneEl.getAttribute('data-id');
+          const data = milestones.find(m => m.id == id);
+          modalImage.src = data.image;
+          modalTitle.textContent = data.title;
+          modalCaption.textContent = data.caption;
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+          
+          // Play music if not playing
+          if (music.paused) {
+            startMusic();
+          }
+        }
+      });
+      
+      // Close modal
+      closeBtn.addEventListener('click', () => { 
+        modal.classList.remove('active'); 
+        document.body.style.overflow = ''; 
+      });
+      
+      modal.addEventListener('click', (e) => { 
+        if (e.target === modal) { 
+          modal.classList.remove('active'); 
+          document.body.style.overflow = ''; 
+        } 
+      });
+      
+      // Create floating hearts
+      function createHearts() {
+        for (let i = 0; i < 25; i++) {
+          const heart = document.createElement('div');
+          heart.className = 'heart';
+          heart.style.left = `${Math.random() * 100}%`;
+          heart.style.bottom = `${-50 - Math.random() * 100}px`;
+          const size = 15 + Math.random() * 25;
+          heart.style.width = heart.style.height = `${size}px`;
+          heart.style.opacity = 0.5 + Math.random() * 0.5;
+          heart.style.animationDuration = `${15 + Math.random() * 25}s`;
+          heart.style.animationDelay = `${Math.random() * 10}s`;
+          document.body.appendChild(heart);
+        }
+      }
+      
+      // Create sparkling effects
+      function createSparkles() {
+        for (let i = 0; i < 20; i++) {
+          const sparkle = document.createElement('div');
+          sparkle.className = 'sparkle';
+          sparkle.style.left = `${Math.random() * 100}%`;
+          sparkle.style.top = `${Math.random() * 100}%`;
+          sparkle.style.animationDelay = `${Math.random() * 5}s`;
+          document.body.appendChild(sparkle);
+        }
+      }
+      
+      createHearts();
+      createSparkles();
+      
+      // Continue button functionality
+      document.getElementById('continueBtn').addEventListener('click', () => {
+        // Create a grand celebration before redirecting
+        for (let i = 0; i < 50; i++) {
+          setTimeout(() => {
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
+            createCelebrationParticles(x, y);
+          }, i * 30);
+        }
+        
+        // Play victory sound
+        try {
+          const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          
+          // Play a celebratory chord
+          oscillator.frequency.setValueAtTime(523.25, audioContext.currentTime); // C5
+          oscillator.frequency.setValueAtTime(659.25, audioContext.currentTime + 0.1); // E5
+          oscillator.frequency.setValueAtTime(783.99, audioContext.currentTime + 0.2); // G5
+          oscillator.frequency.setValueAtTime(1046.50, audioContext.currentTime + 0.3); // C6
+          
+          gainNode.gain.setValueAtTime(0.5, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 1);
+          
+          oscillator.start(audioContext.currentTime);
+          oscillator.stop(audioContext.currentTime + 1);
+        } catch (e) {
+          console.log("Audio context not supported");
+        }
+        
+        // Show a message before redirecting
+        setTimeout(() => {
+          alert("I love you more than all the stars in the sky ✨\n\nReady for our next adventure together? 💖");
+          window.location.href = 'letter.html';
+        }, 1500);
+      });
+      
+      // Start music on first click anywhere
+      document.addEventListener('click', function startMusicOnce() {
+        startMusic();
+        document.removeEventListener('click', startMusicOnce);
+      });
+    });
+  </script>
+</body>
+</html>

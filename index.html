@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy New Year My Love 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@600;700&family=Kaushan+Script&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ================= BODY ================= */
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    overflow-x:hidden;
+    background: linear-gradient(135deg, 
+        #0a0a23 0%, 
+        #1a1a3a 25%, 
+        #2d1b69 50%, 
+        #1a1a3a 75%, 
+        #0a0a23 100%);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+    position:relative;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ================= FLOATING STAR BACKGROUND ================= */
+.star-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* ================= FIREWORKS CANVAS ================= */
+.fireworks-container{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:1;
+}
+
+#fireworksCanvas{
+    width:100%;
+    height:100%;
+}
+
+/* ================= FLOATING ICONS ================= */
+.svg-icon{
+    position:absolute;
+    width:48px;
+    height:48px;
+    opacity:0.8;
+    fill:#FFD700;
+    animation:float 8s infinite ease-in-out;
+    filter: drop-shadow(0 0 10px currentColor);
+    z-index: 1;
+}
+
+.svg-icon.star{
+    fill:#FFD700;
+    animation-delay: 0.5s;
+}
+.svg-icon.heart{
+    fill:#FF6B6B;
+    animation-delay: 1s;
+}
+.svg-icon.moon{
+    fill:#96CEB4;
+    animation-delay: 1.5s;
+}
+
+@keyframes float{
+    0%,100%{ transform:translateY(0) rotate(0deg); }
+    25%{ transform:translateY(-25px) rotate(5deg); }
+    50%{ transform:translateY(-15px) rotate(-5deg); }
+    75%{ transform:translateY(-20px) rotate(3deg); }
+}
+
+/* ================= LOADING SCREEN ================= */
+.loading-screen{
+    position:fixed;
+    inset:0;
+    background: linear-gradient(135deg, #0a0a23 0%, #1a1a3a 100%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+    transition:.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.loading-screen.hidden{
+    opacity:0;
+    pointer-events:none;
+    transform: scale(1.1);
+}
+
+.loading-wrapper{
+    text-align:center;
+    width:320px;
+    position:relative;
+}
+
+.loading-text{
+    font-family:'Dancing Script',cursive;
+    font-size:3.2rem;
+    color:#FFD700;
+    margin-bottom:30px;
+    text-shadow:0 0 25px #FFD700;
+    background: linear-gradient(90deg, #FFD700, #FFED4E, #FFD700);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+/* LOADING BAR */
+.kitty-bar{
+    position:relative;
+    width:100%;
+    height:18px;
+    background:rgba(255,255,255,0.08);
+    border-radius:50px;
+    margin:60px 0;
+    overflow:hidden;
+    border: 2px solid rgba(255, 215, 0, 0.2);
+}
+
+.kitty-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 215, 0, 0.3), 
+        transparent);
+    animation: loadingShine 2s infinite;
+}
+
+@keyframes loadingShine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.kitty-progress{
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg,#FFD700,#FF6B6B,#FF9FF3);
+    border-radius:50px;
+    box-shadow:0 0 25px rgba(255, 215, 0, 0.7);
+    transition: width 0.3s ease;
+}
+
+.kitty{
+    position:absolute;
+    top:-45px;
+    left:0%;
+    width:85px;
+    height:85px;
+    object-fit:contain;
+    filter: drop-shadow(0 5px 15px rgba(255, 215, 0, 0.5));
+    transition: left 0.3s ease;
+}
+
+.loading-percent{
+    font-size:1.6rem;
+    color:#FFD700;
+    font-weight:600;
+    text-shadow:0 0 15px #FFD700;
+    font-family: 'Playfair Display', serif;
+}
+
+/* ================= MAIN CONTENT ================= */
+.main-content{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+    position:relative;
+    z-index: 2;
+}
+
+/* ================= ENCHANTED FOREST BACKGROUND ================= */
+.forest-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(150, 206, 180, 0.05) 0%, transparent 50%);
+    z-index: 0;
+}
+
+/* ================= GIF CONTAINER ================= */
+.gif-container{
+    position:absolute;
+    top:30px;
+    right:30px;
+    z-index:3;
+    animation: floatGif 6s infinite ease-in-out;
+}
+
+@keyframes floatGif {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+.christmas-gif{
+    width:140px;
+    height:140px;
+    border-radius:20px;
+    object-fit:cover;
+    border: 3px solid rgba(255, 215, 0, 0.4);
+    box-shadow: 
+        0 15px 35px rgba(0,0,0,0.5),
+        0 0 30px rgba(255, 215, 0, 0.3);
+    transition: all 0.5s ease;
+}
+
+.christmas-gif:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 
+        0 25px 45px rgba(0,0,0,0.6),
+        0 0 40px rgba(255, 215, 0, 0.5);
+}
+
+/* ================= CARD ================= */
+.wish-container{
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255,215,0,0.3);
+    border-radius: 28px;
+    padding: 40px 30px;
+    max-width: 320px;
+    width:100%;
+    text-align:center;
+    box-shadow: 
+        0 25px 50px rgba(0,0,0,0.7),
+        0 0 60px rgba(255,215,0,0.2),
+        inset 0 0 30px rgba(255, 215, 0, 0.05);
+    z-index:2;
+    position: relative;
+    overflow: hidden;
+    animation: cardEntrance 1s ease-out;
+}
+
+@keyframes cardEntrance {
+    0% { opacity: 0; transform: translateY(50px) scale(0.9); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.wish-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 215, 0, 0.05) 50%,
+        transparent 70%
+    );
+    animation: cardShimmer 8s infinite linear;
+    z-index: 0;
+}
+
+.wish-container > * {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes cardShimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+/* ================= TEXT ================= */
+.main-title{
+    font-family:'Kaushan Script',cursive;
+    font-size:2.4rem;
+    color:#FFD700;
+    text-shadow:0 0 25px #FFD700;
+    animation: titleGlow 3s ease-in-out infinite alternate;
+    margin-bottom:12px;
+    line-height: 1.2;
+}
+
+@keyframes titleGlow{
+    0%{ 
+        text-shadow:0 0 20px #FFD700, 0 0 30px rgba(255, 215, 0, 0.5); 
+        transform: scale(1);
+    }
+    100%{ 
+        text-shadow:0 0 40px #FFD700, 0 0 60px #FFD700, 0 0 80px rgba(255, 215, 0, 0.7); 
+        transform: scale(1.02);
+    }
+}
+
+.subtitle{
+    font-family:'Dancing Script',cursive;
+    font-size:1.8rem;
+    color:#FFFFFF;
+    margin:15px 0 25px;
+    text-shadow:0 0 15px rgba(255,255,255,0.9);
+    background: linear-gradient(90deg, #FFFFFF, #FFED4E, #FFFFFF);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 4s infinite linear;
+}
+
+.message{
+    font-size:1.05rem;
+    line-height:1.7;
+    color:#E0E0E0;
+    margin-bottom:25px;
+    text-shadow:0 0 8px rgba(255,255,255,0.6);
+    padding: 0 10px;
+}
+
+.signature{
+    font-family:'Dancing Script',cursive;
+    font-size:1.8rem;
+    color:#FFD700;
+    margin-top:25px;
+    text-shadow:0 0 20px #FFD700;
+    animation: signatureFloat 4s infinite ease-in-out;
+}
+
+@keyframes signatureFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* ================= BUTTON ================= */
+.next-btn{
+    margin-top:30px;
+    padding:16px 40px;
+    border: 2px solid rgba(255, 215, 0, 0.8);
+    border-radius:50px;
+    background: linear-gradient(135deg, #FFD700, #FF6B6B, #FF85A1);
+    background-size: 200% 100%;
+    color:#000000;
+    font-size:1.1rem;
+    font-weight:700;
+    cursor:pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 
+        0 15px 30px rgba(255,215,0,0.4),
+        0 0 30px rgba(255, 215, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+}
+
+.next-btn:hover{
+    transform:translateY(-5px) scale(1.08);
+    background: linear-gradient(135deg, #FFED4E, #FF8080, #FF9FF3);
+    background-position: 100% 0;
+    box-shadow: 
+        0 25px 45px rgba(255,215,0,0.6),
+        0 0 50px rgba(255, 215, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+.next-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.4), 
+        transparent);
+    transition: left 0.7s ease;
+}
+
+.next-btn:hover::after {
+    left: 100%;
+}
+
+/* ================= ROMANTIC MESSAGE ================= */
+.romantic-message {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+}
+
+.heart-beat {
+    color: #FF6B6B;
+    font-size: 1.8rem;
+    animation: heartbeat 1.5s infinite;
+    filter: drop-shadow(0 0 10px #FF6B6B);
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.2); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.1); }
+}
+
+/* ================= SNOW EFFECT ================= */
+.snow {
+    position: fixed;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    filter: blur(1px);
+    animation: fall linear infinite;
+    z-index: 1;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:480px){
+    .main-title{font-size:2rem;}
+    .subtitle{font-size:1.5rem;}
+    .christmas-gif{
+        width:100px;
+        height:100px;
+    }
+    .gif-container{
+        top:20px;
+        right:20px;
+    }
+    .wish-container{
+        padding:30px 20px;
+    }
+}
+
+@media(max-height:700px){
+    .christmas-gif{
+        width:90px;
+        height:90px;
+    }
+    .wish-container{
+        padding:25px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= STAR BACKGROUND ================= -->
+<div class="star-background" id="starBackground"></div>
+
+<!-- ================= ENCHANTED FOREST ================= -->
+<div class="forest-background"></div>
+
+<!-- ================= SNOW EFFECT ================= -->
+<div id="snowContainer"></div>
+
+<!-- ================= LOADING ================= -->
+<div class="loading-screen" id="loadingScreen">
+
+    <svg class="svg-icon heart" style="top:15%;left:10%" viewBox="0 0 24 24">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+        2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09
+        C13.09 3.81 14.76 3 16.5 3
+        19.58 3 22 5.42 22 8.5
+        c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </svg>
+
+    <svg class="svg-icon star" style="bottom:25%;right:15%" viewBox="0 0 24 24">
+        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24
+        l-7.19-.61L12 2 9.19 8.63 2 9.24
+        l5.46 4.73L5.82 21z"/>
+    </svg>
+
+    <svg class="svg-icon moon" style="top:25%;right:20%" viewBox="0 0 24 24">
+        <path d="M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36c-0.98,1.37-2.58,2.26-4.4,2.26
+        c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/>
+    </svg>
+
+    <div class="loading-wrapper">
+        <div class="loading-text">Loading Our Magic...</div>
+
+        <div class="kitty-bar">
+            <div class="kitty-progress" id="progress"></div>
+            <img src="./gif2.gif" class="kitty" id="kitty">
+        </div>
+
+        <div class="loading-percent" id="percent">0%</div>
+    </div>
+</div>
+
+<!-- ================= FIREWORKS ================= -->
+<div class="fireworks-container">
+    <canvas id="fireworksCanvas"></canvas>
+</div>
+
+<!-- ================= MAIN PAGE ================= -->
+<div class="main-content">
+
+    <!-- GIF Container at top right -->
+    <div class="gif-container">
+        <img src="./icon.gif" alt="Christmas GIF" class="christmas-gif">
+    </div>
+
+    <!-- Floating decorative icons -->
+    <svg class="svg-icon heart" style="top:15%;left:8%" viewBox="0 0 24 24">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+        2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09
+        C13.09 3.81 14.76 3 16.5 3
+        19.58 3 22 5.42 22 8.5
+        c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </svg>
+
+    <svg class="svg-icon star" style="top:12%;right:8%" viewBox="0 0 24 24">
+        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24
+        l-7.19-.61L12 2 9.19 8.63 2 9.24
+        l5.46 4.73L5.82 21z"/>
+    </svg>
+
+    <svg class="svg-icon star" style="bottom:20%;left:12%" viewBox="0 0 24 24">
+        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24
+        l-7.19-.61L12 2 9.19 8.63 2 9.24
+        l5.46 4.73L5.82 21z"/>
+    </svg>
+
+    <!-- Main Card -->
+    <div class="wish-container">
+        <h1 class="main-title">Welcome to 2026</h1>
+        <h2 class="subtitle">Happy New Year, My Love! 🎆</h2>
+        
+        <p class="message">
+            As the clock strikes midnight, I want you to know that my greatest wish for this new year 
+            is more beautiful moments with you. Every day with you is a blessing I cherish deeply. 💖
+        </p>
+        
+        <button class="next-btn" id="nextButton">
+            <i class="fas fa-heart mr-2"></i> 
+            Discover Our Memories 
+            <i class="fas fa-arrow-right ml-2"></i>
+        </button>
+        
+        <p class="signature">Forever Yours 💫</p>
+    </div>
+
+    <!-- Romantic floating hearts -->
+    <div class="romantic-message">
+        <div class="heart-beat">❤️</div>
+        <p class="text-white/80 text-sm mt-2">Made with infinite love</p>
+    </div>
+</div>
+
+<!-- Background Music Toggle -->
+<div class="music-toggle fixed bottom-6 right-6 z-50">
+    <button id="musicToggle" class="w-12 h-12 rounded-full bg-gradient-to-br from-goldAccent to-newYearRed flex items-center justify-center text-white shadow-2xl hover:scale-110 transition-all">
+        <i class="fas fa-play text-lg"></i>
+    </button>
+</div>
+
+<script>
+// ================= CREATE STAR BACKGROUND =================
+function createStarBackground() {
+    const container = document.getElementById('starBackground');
+    const starCount = 150;
+    
+    for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.width = star.style.height = `${Math.random() * 3 + 1}px`;
+        star.style.opacity = Math.random() * 0.7 + 0.3;
+        star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+        star.style.animationDelay = `${Math.random() * 5}s`;
+        container.appendChild(star);
+    }
+}
+
+// ================= CREATE SNOW EFFECT =================
+function createSnow() {
+    const container = document.getElementById('snowContainer');
+    const snowCount = 50;
+    
+    for (let i = 0; i < snowCount; i++) {
+        const snow = document.createElement('div');
+        snow.className = 'snow';
+        snow.style.left = `${Math.random() * 100}%`;
+        snow.style.width = snow.style.height = `${Math.random() * 8 + 2}px`;
+        snow.style.opacity = Math.random() * 0.7 + 0.3;
+        snow.style.animationDuration = `${Math.random() * 10 + 5}s`;
+        snow.style.animationDelay = `${Math.random() * 5}s`;
+        container.appendChild(snow);
+    }
+}
+
+// ================= LOADING ANIMATION =================
+let percent = 0;
+const progress = document.getElementById("progress");
+const kitty = document.getElementById("kitty");
+const percentText = document.getElementById("percent");
+const loadingScreen = document.getElementById("loadingScreen");
+
+const loadingInterval = setInterval(() => {
+    percent += 1;
+    progress.style.width = percent + "%";
+    kitty.style.left = `calc(${percent}% - 42px)`;
+    percentText.innerText = percent + "%";
+
+    if (percent >= 100) {
+        clearInterval(loadingInterval);
+        setTimeout(() => {
+            loadingScreen.classList.add("hidden");
+            setTimeout(() => {
+                loadingScreen.remove();
+                startFireworks(); // Start fireworks after loading
+                createSparkleEffects(); // Add sparkle effects
+                startBackgroundMusic(); // Start background music
+            }, 800);
+        }, 500);
+    }
+}, 30);
+
+// ================= SPARKLE EFFECTS =================
+function createSparkleEffects() {
+    // Create floating sparkles around the card
+    for (let i = 0; i < 20; i++) {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'absolute w-2 h-2 rounded-full bg-gradient-to-r from-yellow-300 to-pink-400 animate-pulse';
+        sparkle.style.left = `${Math.random() * 100}%`;
+        sparkle.style.top = `${Math.random() * 100}%`;
+        sparkle.style.animationDelay = `${Math.random() * 2}s`;
+        sparkle.style.opacity = '0.7';
+        sparkle.style.zIndex = '1';
+        document.querySelector('.main-content').appendChild(sparkle);
+    }
+}
+
+// ================= BACKGROUND MUSIC =================
+function startBackgroundMusic() {
+    // Create audio element
+    const audio = document.createElement('audio');
+    audio.id = 'backgroundMusic';
+    audio.loop = true;
+    audio.volume = 0.5;
+    
+    // Add source (using a romantic royalty-free music)
+    const source = document.createElement('source');
+    source.src = 'https://assets.mixkit.co/music/preview/mixkit-romantic-sunset-687.mp3';
+    source.type = 'audio/mpeg';
+    audio.appendChild(source);
+    
+    document.body.appendChild(audio);
+    
+    // Music toggle functionality
+    const musicToggle = document.getElementById('musicToggle');
+    let isPlaying = false;
+    
+    musicToggle.addEventListener('click', () => {
+        if (isPlaying) {
+            audio.pause();
+            musicToggle.innerHTML = '<i class="fas fa-play text-lg"></i>';
+        } else {
+            audio.play().catch(e => console.log("Autoplay blocked"));
+            musicToggle.innerHTML = '<i class="fas fa-pause text-lg"></i>';
+        }
+        isPlaying = !isPlaying;
+    });
+    
+    // Try to play automatically (might be blocked by browser)
+    setTimeout(() => {
+        audio.play().then(() => {
+            isPlaying = true;
+            musicToggle.innerHTML = '<i class="fas fa-pause text-lg"></i>';
+        }).catch(e => {
+            console.log("Autoplay blocked - user needs to interact first");
+        });
+    }, 1000);
+}
+
+// ================= FIREWORKS ANIMATION =================
+class Firework {
+    constructor(canvas) {
+        this.canvas = canvas;
+        this.ctx = canvas.ctx;
+        this.x = Math.random() * canvas.width;
+        this.y = canvas.height;
+        this.targetY = Math.random() * canvas.height * 0.5;
+        this.speed = 4 + Math.random() * 3;
+        this.particles = [];
+        this.exploded = false;
+        this.colors = [
+            '#FFD700', '#FF6B6B', '#4ECDC4', '#45B7D1', 
+            '#96CEB4', '#FECA57', '#FF9FF3', '#54A0FF',
+            '#5F27CD', '#00D2D3', '#FF9F43', '#10AC84'
+        ];
+        this.color = this.colors[Math.floor(Math.random() * this.colors.length)];
+        this.size = 3 + Math.random() * 2;
+    }
+
+    update() {
+        if (!this.exploded) {
+            this.y -= this.speed;
+            // Add slight horizontal movement
+            this.x += (Math.random() - 0.5) * 2;
+            
+            if (this.y <= this.targetY) {
+                this.explode();
+            }
+        } else {
+            this.updateParticles();
+        }
+    }
+
+    explode() {
+        this.exploded = true;
+        const particleCount = 30 + Math.random() * 30;
+        
+        for (let i = 0; i < particleCount; i++) {
+            this.particles.push({
+                x: this.x,
+                y: this.y,
+                vx: (Math.random() - 0.5) * 10,
+                vy: (Math.random() - 0.5) * 10,
+                life: 1.0,
+                decay: 0.004 + Math.random() * 0.008,
+                color: this.colors[Math.floor(Math.random() * this.colors.length)],
+                size: 1.5 + Math.random() * 3
+            });
+        }
+    }
+
+    updateParticles() {
+        this.particles = this.particles.filter(particle => {
+            particle.x += particle.vx;
+            particle.y += particle.vy;
+            particle.vy += 0.08; // gravity
+            particle.vx *= 0.98; // air resistance
+            particle.life -= particle.decay;
+            return particle.life > 0;
+        });
+    }
+
+    draw() {
+        if (!this.exploded) {
+            // Draw rocket with glow
+            this.ctx.save();
+            this.ctx.globalAlpha = 0.9;
+            this.ctx.fillStyle = this.color;
+            this.ctx.shadowBlur = 15;
+            this.ctx.shadowColor = this.color;
+            
+            // Draw rocket body
+            this.ctx.beginPath();
+            this.ctx.moveTo(this.x, this.y);
+            this.ctx.lineTo(this.x - this.size, this.y + this.size * 3);
+            this.ctx.lineTo(this.x + this.size, this.y + this.size * 3);
+            this.ctx.closePath();
+            this.ctx.fill();
+            
+            // Draw rocket trail
+            this.ctx.beginPath();
+            this.ctx.moveTo(this.x, this.y + this.size * 3);
+            this.ctx.lineTo(this.x - this.size * 0.7, this.y + this.size * 6);
+            this.ctx.lineTo(this.x + this.size * 0.7, this.y + this.size * 6);
+            this.ctx.closePath();
+            this.ctx.fillStyle = '#FF9F43';
+            this.ctx.fill();
+            
+            this.ctx.restore();
+        } else {
+            // Draw particles with glow
+            this.particles.forEach(particle => {
+                this.ctx.save();
+                this.ctx.globalAlpha = particle.life * 0.9;
+                this.ctx.fillStyle = particle.color;
+                this.ctx.shadowBlur = 20;
+                this.ctx.shadowColor = particle.color;
+                this.ctx.beginPath();
+                this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                this.ctx.fill();
+                this.ctx.restore();
+            });
+        }
+    }
+
+    isDead() {
+        return this.exploded && this.particles.length === 0;
+    }
+}
+
+class FireworkShow {
+    constructor() {
+        this.canvas = document.getElementById('fireworksCanvas');
+        this.ctx = this.canvas.getContext('2d');
+        this.canvas.ctx = this.ctx;
+        this.fireworks = [];
+        this.running = false;
+        
+        this.resize();
+        window.addEventListener('resize', () => this.resize());
+    }
+
+    resize() {
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+    }
+
+    start() {
+        this.running = true;
+        this.animate();
+        
+        // Create fireworks at intervals
+        setInterval(() => {
+            if (this.running && Math.random() < 0.4) {
+                this.fireworks.push(new Firework(this.canvas));
+            }
+        }, 300);
+
+        // Big burst effect every 8 seconds
+        setInterval(() => {
+            if (this.running) {
+                for (let i = 0; i < 8; i++) {
+                    setTimeout(() => {
+                        this.fireworks.push(new Firework(this.canvas));
+                    }, i * 150);
+                }
+            }
+        }, 8000);
+    }
+
+    animate() {
+        if (!this.running) return;
+
+        // Create fading trail effect
+        this.ctx.fillStyle = 'rgba(10, 10, 35, 0.08)';
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+
+        // Update and draw fireworks
+        this.fireworks = this.fireworks.filter(firework => {
+            firework.update();
+            firework.draw();
+            return !firework.isDead();
+        });
+
+        requestAnimationFrame(() => this.animate());
+    }
+
+    stop() {
+        this.running = false;
+    }
+}
+
+// Global firework show instance
+let fireworkShow;
+
+function startFireworks() {
+    fireworkShow = new FireworkShow();
+    fireworkShow.start();
+}
+
+// ================= NEXT BUTTON FUNCTIONALITY =================
+document.getElementById("nextButton").addEventListener("click", function() {
+    const btn = this;
+    
+    // Add click effect
+    btn.style.transform = "scale(0.95)";
+    btn.style.boxShadow = "0 0 40px #FFD700";
+    
+    // Create celebration particles
+    createButtonParticles(btn);
+    
+    // Play click sound
+    playClickSound();
+    
+    setTimeout(() => {
+        btn.style.transform = "";
+        btn.style.boxShadow = "";
+        
+        // Smooth page transition
+        smoothPageTransition("second.html");
+    }, 300);
+});
+
+// Create particles around button
+function createButtonParticles(button) {
+    const rect = button.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    
+    const colors = ['#FFD700', '#FF6B6B', '#FF85A1', '#4ECDC4'];
+    
+    for (let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.style.position = 'fixed';
+        particle.style.width = '8px';
+        particle.style.height = '8px';
+        particle.style.borderRadius = '50%';
+        particle.style.left = `${centerX}px`;
+        particle.style.top = `${centerY}px`;
+        particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        particle.style.boxShadow = `0 0 15px ${particle.style.backgroundColor}`;
+        particle.style.pointerEvents = 'none';
+        particle.style.zIndex = '9999';
+        
+        document.body.appendChild(particle);
+        
+        // Animate particle
+        const angle = Math.random() * Math.PI * 2;
+        const velocity = 3 + Math.random() * 4;
+        const vx = Math.cos(angle) * velocity;
+        const vy = Math.sin(angle) * velocity;
+        
+        let opacity = 1;
+        let posX = centerX;
+        let posY = centerY;
+        
+        const animateParticle = () => {
+            opacity -= 0.04;
+            posX += vx;
+            posY += vy;
+            
+            particle.style.left = `${posX}px`;
+            particle.style.top = `${posY}px`;
+            particle.style.opacity = opacity;
+            
+            if (opacity > 0) {
+                requestAnimationFrame(animateParticle);
+            } else {
+                particle.remove();
+            }
+        };
+        
+        requestAnimationFrame(animateParticle);
+    }
+}
+
+// Play click sound
+function playClickSound() {
+    try {
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        
+        oscillator.frequency.setValueAtTime(659.25, audioContext.currentTime); // E5
+        oscillator.frequency.setValueAtTime(783.99, audioContext.currentTime + 0.1); // G5
+        
+        gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.4);
+        
+        oscillator.start(audioContext.currentTime);
+        oscillator.stop(audioContext.currentTime + 0.4);
+    } catch (e) {
+        console.log("Audio context not supported");
+    }
+}
+
+// Smooth page transition function
+function smoothPageTransition(targetPage) {
+    // Create overlay for smooth transition
+    const overlay = document.createElement('div');
+    overlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #0a0a23 0%, #1a1a3a 100%);
+        z-index: 99999;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.8s ease-in-out;
+    `;
+    
+    // Add romantic message
+    const message = document.createElement('div');
+    message.style.cssText = `
+        color: #FFD700;
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.5rem;
+        text-align: center;
+        text-shadow: 0 0 30px #FFD700;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease 0.3s;
+    `;
+    message.innerHTML = 'To Our Beautiful Memories ✨';
+    
+    overlay.appendChild(message);
+    document.body.appendChild(overlay);
+
+    // Fade in overlay
+    setTimeout(() => {
+        overlay.style.opacity = '1';
+        setTimeout(() => {
+            message.style.opacity = '1';
+            message.style.transform = 'translateY(0)';
+        }, 50);
+    }, 50);
+
+    // Navigate to target page after delay
+    setTimeout(() => {
+        window.location.href = targetPage;
+    }, 2000);
+}
+
+// ================= INITIALIZE EFFECTS =================
+document.addEventListener('DOMContentLoaded', () => {
+    createStarBackground();
+    createSnow();
+    
+    // Add romantic floating hearts effect
+    setTimeout(() => {
+        for (let i = 0; i < 10; i++) {
+            createFloatingHeart();
+        }
+    }, 2000);
+});
+
+// Create floating hearts
+function createFloatingHeart() {
+    const heart = document.createElement('div');
+    heart.innerHTML = '💖';
+    heart.style.position = 'fixed';
+    heart.style.fontSize = `${Math.random() * 24 + 16}px`;
+    heart.style.left = `${Math.random() * 100}%`;
+    heart.style.top = '100%';
+    heart.style.opacity = '0.7';
+    heart.style.zIndex = '1';
+    heart.style.pointerEvents = 'none';
+    heart.style.filter = 'drop-shadow(0 0 10px currentColor)';
+    
+    document.body.appendChild(heart);
+    
+    // Animate heart
+    const duration = 8 + Math.random() * 8;
+    const endY = -100;
+    const startX = parseFloat(heart.style.left);
+    const endX = startX + (Math.random() - 0.5) * 100;
+    
+    let startTime = null;
+    
+    function animateHeart(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const progress = (timestamp - startTime) / (duration * 1000);
+        
+        if (progress < 1) {
+            const y = 100 - progress * 200;
+            const x = startX + (endX - startX) * progress;
+            const rotation = progress * 360;
+            
+            heart.style.top = `${y}%`;
+            heart.style.left = `${x}%`;
+            heart.style.transform = `rotate(${rotation}deg)`;
+            heart.style.opacity = 0.7 * (1 - progress);
+            
+            requestAnimationFrame(animateHeart);
+        } else {
+            heart.remove();
+        }
+    }
+    
+    requestAnimationFrame(animateHeart);
+}
+</script>
+
+</body>
+</html>
